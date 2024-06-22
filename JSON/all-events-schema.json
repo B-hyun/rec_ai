@@ -1,0 +1,238 @@
+[
+    {
+        "name": "eventTime",
+        "type": "TIMESTAMP",
+        "mode": "REQUIRED"
+    },
+    {
+        "fields" : [
+            {
+                "fields" : [
+                    {
+                        "fields" : [
+                            {
+                                "mode" : "NULLABLE",
+                                "fields" : [
+                                    {
+                                        "mode" : "REPEATED",
+                                        "name" : "value",
+                                        "type" : "STRING"
+                                    }
+                                ],
+                                "name" : "placement_id",
+                                "type" : "RECORD"
+                            },
+                            {
+                                "mode" : "NULLABLE",
+                                "fields" : [
+                                    {
+                                        "mode" : "REPEATED",
+                                    "name" : "value",
+                                    "type" : "STRING"
+                                 }
+                              ],
+                              "type" : "RECORD",
+                              "name" : "context_event_type"
+                           },
+                           {
+                              "name" : "context_item_ids",
+                              "fields" : [
+                                 {
+                                    "type" : "INTEGER",
+                                    "name" : "value",
+                                    "mode" : "REPEATED"
+                                 }
+                              ],
+                              "type" : "RECORD",
+                              "mode" : "NULLABLE"
+                           }
+                        ],
+                        "name" : "categoricalFeatures",
+                        "type" : "RECORD",
+                        "mode" : "NULLABLE"
+                    }
+                ],
+                "name" : "eventAttributes",
+                "type" : "RECORD",
+                "mode" : "NULLABLE"
+            },
+            {         
+                "mode": "NULLABLE",
+                "name": "recommendationToken",
+                "type": "STRING"
+	          },
+	          {
+	              "name": "uri",
+	              "type": "STRING",
+	              "mode": "NULLABLE"
+	          },
+	          {
+                "name": "experimentIds",
+                "mode": "REPEATED",
+                "type": "STRING"
+	          }
+        ],
+        "mode": "NULLABLE",
+        "name": "eventDetail",
+        "type": "RECORD"
+    },
+    {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "userId",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "visitorId",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "directUserRequest",
+        "type": "BOOLEAN"
+      }
+    ],
+    "mode": "REQUIRED",
+    "name": "userInfo",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "cost",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "manufacturing",
+                "type": "FLOAT"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "costs",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "local",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "state",
+                "type": "FLOAT"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "taxes",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "currencyCode",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "revenue",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "id",
+            "type": "INTEGER"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "purchaseTransaction",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "quantity",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "availableQuantity",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "displayPrice",
+            "type": "FLOAT"
+          },
+         {
+            "mode": "NULLABLE",
+            "name": "stockState",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "originalPrice",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "id",
+            "type": "INTEGER"
+          },
+	    {
+            "mode": "NULLABLE",
+            "name": "currencyCode",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "productDetails",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "cartId",
+        "type": "INTEGER"
+      },
+	{
+            "mode": "NULLABLE",
+            "name": "searchQuery",
+            "type": "STRING"
+	},
+	{
+        "fields": [
+          {
+            "mode": "REPEATED",
+            "name": "categories",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "pageCategories",
+        "type": "RECORD"
+	},
+	{
+        "mode": "NULLABLE",
+        "name": "listId",
+        "type": "STRING"
+	}
+    ],
+      "mode": "NULLABLE",
+      "name": "productEventDetail",
+      "type": "RECORD"
+  },
+    {
+	"mode": "REQUIRED",
+	"name": "eventType",
+	"type": "STRING"
+    }
+]
