@@ -1,19 +1,8 @@
-## Retail AI
+구글 클라우드에서 Retail 업계 전용 개인화 추천 서비스는 Recommendations AI 이다. 
 
-Samples and Examples for Google Retail AI (Recommendations AI and Retail Search)
+내부의 제품 정보를 제품 카탈로그화 해서 Recommendations AI로 전송하고 
+사용자의 이벤트 데이터 역시 정제해 Recommendations AI보내면 
+이후부터는 간단하게 추천 모델을 생성 및 배포 할수 있다. 
 
-#### All samples provided as-is without warranty
-
-Please refer to the official documentation for more examples and up-to-date API specifics:
-
-* [Google Retail Documentation](https://cloud.google.com/retail/docs)
-* [Google Retail API Reference](https://cloud.google.com/retail/docs/reference/rest)
-
-***
-### Directories:
-- [GCF](/GCF/) - Sample AJAX implementation for client-side predictions using Google Cloud Functions
-- [JSON](/JSON/) - Example JSON for Retail API
-- [beta](/beta/) - Old examples using the old, beta Recommendations AI API
-- [curl](/curl/) - Examples for doing common tasks with curl commands (REST API)
-- [php](/php/) - Example predict request in php
-- [python](/python/) - Python examples using retail API client libraries
+상세한 내용은 아래 URL 참고 가능하다 .
+https://github.com/EricDLarson/RetailAI
